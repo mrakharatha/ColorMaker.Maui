@@ -3,6 +3,34 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ColorMaker.MainPage">
 
-    
+    <ContentPage.Resources>
+        <Color x:Key="Primary">#ab3527</Color>
+        <Color x:Key="Secondary">#775752</Color>
+        <Color x:Key="OtherColor">#705c2e</Color>
+    </ContentPage.Resources>
+
+
+    <Grid x:Name="Container" BackgroundColor="Black">
+        <Frame Margin="10,0,10,0" VerticalOptions="Center" BackgroundColor="White">
+            <VerticalStackLayout Spacing="20">
+                <Label FontSize="Large" FontAttributes="Bold" Text="Color Piker" HorizontalTextAlignment="Center"/>
+                <Label Text="Red Value:"/>
+                <Slider x:Name="SldRed" MaximumTrackColor="{StaticResource OtherColor}" MinimumTrackColor="{StaticResource Secondary}" ThumbColor="{StaticResource Primary}" ValueChanged="Sld_OnValueChanged" />
+                <Label Text="Blue Value:"/>
+                <Slider x:Name="SldBlue" MaximumTrackColor="{StaticResource OtherColor}" MinimumTrackColor="{StaticResource Secondary}" ThumbColor="{StaticResource Primary}" ValueChanged="Sld_OnValueChanged" />
+                <Label Text="Green Value:"/>
+                <Slider x:Name="SldGreen" MaximumTrackColor="{StaticResource OtherColor}" MinimumTrackColor="{StaticResource Secondary}" ThumbColor="{StaticResource Primary}" ValueChanged="Sld_OnValueChanged" />
+
+                <Frame CornerRadius="25" HorizontalOptions="Center">
+                    <HorizontalStackLayout>
+                        <Label x:Name="LblHex" Text="Hex Value : #000000" VerticalOptions="Center" />
+                        <ImageButton Margin="10,0,0,0" HeightRequest="25" WidthRequest="25" Source="copy.svg" Clicked="ImageButton_OnClicked"/>
+                    </HorizontalStackLayout>
+                </Frame>
+                <Button x:Name="BtnRandom" BackgroundColor="{StaticResource Primary}" Text="Generate Random Color" Clicked="BtnRandom_OnClicked"/>
+            </VerticalStackLayout>
+        </Frame>
+    </Grid>
+
 
 </ContentPage>
