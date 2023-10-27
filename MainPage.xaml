@@ -16,10 +16,10 @@
                 <Label FontSize="Large" FontAttributes="Bold" Text="Color Piker" HorizontalTextAlignment="Center"/>
                 <Label Text="Red Value:"/>
                 <Slider x:Name="SldRed" MaximumTrackColor="{StaticResource OtherColor}" MinimumTrackColor="{StaticResource Secondary}" ThumbColor="{StaticResource Primary}" ValueChanged="Sld_OnValueChanged" />
-                <Label Text="Blue Value:"/>
-                <Slider x:Name="SldBlue" MaximumTrackColor="{StaticResource OtherColor}" MinimumTrackColor="{StaticResource Secondary}" ThumbColor="{StaticResource Primary}" ValueChanged="Sld_OnValueChanged" />
                 <Label Text="Green Value:"/>
                 <Slider x:Name="SldGreen" MaximumTrackColor="{StaticResource OtherColor}" MinimumTrackColor="{StaticResource Secondary}" ThumbColor="{StaticResource Primary}" ValueChanged="Sld_OnValueChanged" />
+                <Label Text="Blue Value:"/>
+                <Slider x:Name="SldBlue" MaximumTrackColor="{StaticResource OtherColor}" MinimumTrackColor="{StaticResource Secondary}" ThumbColor="{StaticResource Primary}" ValueChanged="Sld_OnValueChanged" />
 
                 <Frame CornerRadius="25" HorizontalOptions="Center">
                     <HorizontalStackLayout>
